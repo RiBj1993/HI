@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar style="color: brown">
+
+    
+    <ion-title>Book Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{classroom.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-subtitle>Details:</ion-card-subtitle>
+      <ul>
+        <li >
+            <ion-icon name="Book" slot="start"></ion-icon>
+            Name:
+          {{classroom.name}}</li>
+        <li >
+            <ion-icon name="logo-usd"></ion-icon>
+            price:  {{classroom.price}}</li>
+        <li >
+            <ion-icon name="checkbox-outline"></ion-icon>
+            availability:  {{classroom.availability}}</li>
+          <li >
+              <ion-icon name="create"></ion-icon>          
+              isbn:      {{classroom.isbn}}</li>
+      </ul>
+      <ion-buttons slot="primary">
+        <ion-button routerLink="/edit/{{classroom.id}}">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-button>
+        <ion-button (click)="delete(classroom.id)">
+          <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

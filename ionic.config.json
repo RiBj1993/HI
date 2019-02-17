@@ -1,6 +1,8 @@
 {
   "name": "booktime",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "b5b66c40"
 }

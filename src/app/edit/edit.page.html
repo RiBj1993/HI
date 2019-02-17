@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar style="color: brown">
+ 
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Book</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="data">
+ 
+    <ion-item-divider>
+ 
+          <form (ngSubmit)="updateClassroom()">
+      
+        <ion-item>
+          <ion-label>isbn</ion-label>
+          <ion-input type="number" placeholder="isbn" [(ngModel)]="data.isbn" name="isbn" required=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>availability</ion-label>
+          <ion-select [(ngModel)]="data.availability" name="type" required="">
+              <ion-select-option value="true">true</ion-select-option>
+            <ion-select-option value="false">false</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>name</ion-label>
+          <ion-input type="text" placeholder="Name" [(ngModel)]="data.name" name="name" required=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Amount</ion-label>
+          <ion-input type="number" placeholder="Amount" [(ngModel)]="data.price" name="price" required=""></ion-input>
+        </ion-item>
+        <ion-input type="hidden" [(ngModel)]="data.id" name="id"></ion-input>
+
+            <ion-button shape="round" color="primary" expand="block"  (click)="updateClassroom()"  >Submit</ion-button>
+
+         </form>
+        
+    </ion-item-divider>
+   
+  </form>
+</ion-content>
